@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="goldGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBF5B7" />
+      <stop offset="30%" stop-color="#D4AF37" />
+      <stop offset="70%" stop-color="#AA771C" />
+      <stop offset="100%" stop-color="#FDF0CD" />
+    </linearGradient>
+    <linearGradient id="maroonGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5A0715" />
+      <stop offset="100%" stop-color="#36020A" />
+    </linearGradient>
+  </defs>
+
+  <rect width="100" height="100" rx="20" fill="url(#maroonGrad2)" stroke="url(#goldGrad2)" stroke-width="3" />
+  <rect x="6" y="6" width="88" height="88" rx="16" fill="none" stroke="url(#goldGrad2)" stroke-width="1" stroke-dasharray="3,3" />
+  
+  <!-- Crown Top -->
+  <path d="M35 28 L42 34 L50 24 L58 34 L65 28 L62 38 L38 38 Z" fill="url(#goldGrad2)" />
+  
+  <!-- Monogram Letters DKJ -->
+  <text x="50" y="63" 
+        font-family="'Bodoni Moda', 'Playfair Display', Georgia, serif" 
+        font-size="25" 
+        font-weight="700" 
+        letter-spacing="2" 
+        fill="url(#goldGrad2)" 
+        text-anchor="middle">DKJ</text>
+
+  <!-- Small Diamond below -->
+  <polygon points="50,71 54,75 50,79 46,75" fill="url(#goldGrad2)" />
+</svg>

@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Jewellery Collection | DK Jewellers</title>
+  <meta name="description" content="Explore DK Jewellers' full range of 22K gold and 925 sterling silver jewellery across 11 exclusive categories: Earrings, Bangles, Necklaces, Rings, Bridal Sets, Anklets, and more.">
+  <link rel="icon" type="image/svg+xml" href="images/monogram.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ======================================================================
+       COMMON ANNOUNCEMENT BAR (Section 4.1)
+       ====================================================================== -->
+  <div class="announcement-bar">
+    <div class="announcement-content">
+      <div class="announcement-left">
+        <span class="announcement-sparkle">✦</span>
+        <span class="announcement-text">Discover Timeless Jewellery | Elegance in Every Detail</span>
+      </div>
+      <div class="announcement-right">
+        <span>Showroom: Chauri, Parshurampur, Basti (U.P.)</span>
+        <a href="tel:+919198683121" class="announcement-contact-link">
+          <span>📞 +91 9198683121</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       COMMON NAVIGATION BAR (Section 4.2)
+       ====================================================================== -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-brand" aria-label="DK Jewellers Home">
+        <img src="images/logo.svg" alt="DK Jewellers Logo" height="52" style="max-height: 52px; width: auto;">
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="product.html" class="nav-link active">Product</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="tel:+919198683121" class="nav-phone-badge">
+          <span>📞 9198683121</span>
+        </a>
+        <button class="nav-toggle-btn" aria-label="Toggle navigation menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         SECTION 6.1: PRODUCT PAGE HEADING & INTRO
+         ====================================================================== -->
+    <section style="background: linear-gradient(180deg, #FDFBF7 0%, #F5ECE0 100%); padding: 50px 0 35px; border-bottom: 1px solid var(--border-cream); text-align: center;">
+      <div class="container">
+        <span class="section-tag">DK Jewellers Catalogue</span>
+        <h1 class="section-title">Our Jewellery Collection</h1>
+        <div class="ornament-divider">
+          <span class="ornament-line"></span>
+          <span class="ornament-diamond"></span>
+          <span class="ornament-line right"></span>
+        </div>
+        <p class="section-subtitle" style="margin-bottom: 0;">Discover jewellery for every style and occasion. Filter across our eleven specialized categories or search directly by design.</p>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 6.2 & 6.3: JEWELLERY CATEGORIES & FILTER CONTROLS
+         ====================================================================== -->
+    <section class="section-wrapper">
+      <div class="container">
+        
+        <!-- Filter Controls Wrap -->
+        <div class="product-filters-wrap">
+          <div class="filter-search-row">
+            <!-- Live Search Box -->
+            <div class="filter-search-box">
+              <span class="search-icon">🔍</span>
+              <input type="text" id="productSearchInput" placeholder="Search by jewellery name, category, or metal..." aria-label="Search jewellery">
+            </div>
+
+            <!-- Metal Filters -->
+            <div class="metal-filter-pills">
+              <button class="metal-pill active" data-metal="all">All Metals</button>
+              <button class="metal-pill" data-metal="gold">Gold (22K 916)</button>
+              <button class="metal-pill" data-metal="silver">Silver (925)</button>
+            </div>
+
+            <div style="margin-left: auto; font-size: 0.88rem; color: var(--text-muted); font-weight: 500;" id="resultsCount">
+              Showing all products
+            </div>
+          </div>
+
+          <!-- Section 6.2: Eleven Categories Navigation Pills -->
+          <div class="category-nav-pills" role="tablist" aria-label="Jewellery Categories">
+            <button class="category-pill active" data-category="all">All Categories</button>
+            <button class="category-pill" data-category="earrings">1. Earrings <span class="pill-count">2</span></button>
+            <button class="category-pill" data-category="bangles">2. Bangles <span class="pill-count">2</span></button>
+            <button class="category-pill" data-category="necklace">3. Necklace <span class="pill-count">4</span></button>
+            <button class="category-pill" data-category="bracelets">4. Bracelets <span class="pill-count">2</span></button>
+            <button class="category-pill" data-category="nath">5. Nath <span class="pill-count">1</span></button>
+            <button class="category-pill" data-category="ring">6. Ring <span class="pill-count">4</span></button>
+            <button class="category-pill" data-category="bridal collection">7. Bridal Collection <span class="pill-count">2</span></button>
+            <button class="category-pill" data-category="anklet">8. Anklet <span class="pill-count">3</span></button>
+            <button class="category-pill" data-category="maang tikka">9. Maang Tikka <span class="pill-count">1</span></button>
+            <button class="category-pill" data-category="chain">10. Chain <span class="pill-count">2</span></button>
+            <button class="category-pill" data-category="other">11. Other <span class="pill-count">2</span></button>
+          </div>
+        </div>
+
+        <!-- ======================================================================
+             SECTION 6.3 & 6.4: PRODUCT GRID (All 11 Categories)
+             ====================================================================== -->
+        <div class="collection-slider" id="productsGrid">
+
+          <!-- 1. EARRINGS -->
+          <div class="product-card" data-title="Traditional Temple Gold Jhumkas" data-category="Earrings" data-metal="22K Yellow Gold" data-metal-type="gold" data-purity="916 BIS Hallmarked" data-weight="18.5 gms" data-price="Price on Daily Gold Rate" data-desc="Authentic temple architecture bell jhumkas with ruby flower top and delicate pearl tassels." data-img="images/cat_earrings.jpg">
+            <div class="product-card-img-wrap">
+              <span class="badge-purity">22K 916 Gold</span>
+              <img src="images/cat_earrings.jpg" alt="Traditional Temple Gold Jhumkas">
+            </div>
+            <div class="product-card-body">
+              <span class="product-category-name">1. Earrings • Gold</span>
+              <h4 class="product-card-title">Traditional Temple Gold Jhumkas</h4>
+              <p class="product-meta-desc">Bell-shaped chandelier jhumkas with pearl drop fringe.</p>
+              <div class="product-price-bar">
+                <span class="product-price">Price on Daily Rate</span>
+                <span class="product-weight">18.5 gms | 22K 916</span>
+              </div>
+              <div class="product-card-actions">
+                <button class="btn-view-details">View Details</button>
+                <a href="https://wa.me/919198683121?text=Hi%20DK%20Jewellers,%20I%20am%20interested%20in%20Traditional%20Temple%20Gold%20Jhumkas" target="_blank" rel="noopener" class="btn-inquire-icon" title="Inquire on WhatsApp">💬</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-title="Royal Bridal Polki Jhumka Earrings" data-category="Earrings" data-metal="22K Gold &amp; Kundan" data-metal-type="gold" data-purity="916 Certified" data-weight="22.0 gms" data-price="Price on Daily Gold Rate" data-desc="Elaborate wedding earrings adorned with uncut polki stones and emerald drops." data-img="images/bridal_earrings.jpg">
+            <div class="product-card-img-wrap">
+              <span class="badge-purity">Bridal Heritage</span>
+              <img src="images/bridal_earrings.jpg" alt="Royal Bridal Polki Jhumka Earrings">
+            </div>
+            <div class="product-card-body">
+              <span class="product-category-name">1. Earrings • Bridal</span>
+              <h4 class="product-card-title">Royal Bridal Polki Jhumkas</h4>
+              <p class="product-meta-desc">Regal uncut stones with emerald beads and seed pearls.</p>
+              <div class="product-price-bar">
+                <span class="product-price">Price on Daily Rate</span>
+                <span class="product-weight">22.0 gms | 22K</span>
+              </div>
+              <div class="product-card-actions">
+                <button class="btn-view-details">View Details</button>
+                <a href="https://wa.me/919198683121?text=Hi%20DK%20Jewellers,%20I%20am%20interested%20in%20Royal%20Bridal%20Polki%20Jhumkas" target="_blank" rel="noopener" class="btn-inquire-icon" title="Inquire on WhatsApp">💬</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. BANGLES -->
+          <div class="product-card" data-title="Handcrafted 22K Gold Kadas (Pair)" data-category="Bangles" data-metal="22K Yellow Gold" data-metal-type="gold" data-purity="916 BIS Hallmarked" data-weight="32.0 gms" data-price="Price on Daily Gold Rate" data-desc="Pair of handcrafted traditional gold kadas with floral and peacock chiseled engraving." data-img="images/gold_bangles.jpg">
+            <div class="product-card-img-wrap">
+              <span class="badge-purity">22K 916 Gold</span>
+              <img src="images/gold_bangles.jpg" alt="Handcrafted 22K Gold Kadas">
+            </div>
+            <div class="product-card-body">
+              <span class="product-category-name">2. Bangles • Gold</span>
+              <h4 class="product-card-title">Handcrafted 22K Gold Kadas</h4>
+              <p class="product-meta-desc">Solid gold openable kadas with traditional lock.</p>
+              <div class="product-price-bar">
+                <span class="product-price">Price on Daily Rate</span>
+                <span class="product-weight">32.0 gms | Pair</span>
+              </div>
+              <div class="product-card-actions">
+                <button class="btn-view-details">View Details</button>
+                <a href="https://wa.me/919198683121?text=Hi%20DK%20Jewellers,%20I%20am%20interested%20in%20Handcrafted%2022K%20Gold%20Kadas" target="_blank" rel="noopener" class="btn-inquire-icon" title="Inquire on WhatsApp">💬</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-title="Handcrafted 925 Silver Bangles Stack" data-category="Bangles" data-metal="925 Sterling Silver" data-metal-type="silver" data-purity="925 Certified" data-weight="38.0 gms" data-price="₹4,200" data-desc="Set of 4 embossed silver bangles featuring geometric and floral engravings." data-img="images/silver_bangles.jpg">
+            <div class="product-card-img-wrap">
+              <span class="badge-purity badge-metal-silver">925 Silver</span>
+              <img src="images/silver_bangles.jpg" alt="Handcrafted 925 Silver Bangles Stack">
+            </div>
+            <div class="product-card-body">
+              <span class="product-category-name">2. Bangles • Silver</span>
+              <h4 class="product-card-title">Handcrafted 925 Silver Bangles</h4>
+              <p class="product-meta-desc">Traditional embossed textures in pure sterling silver.</p>
+              <div class="product-price-bar">
+                <span class="product-price">₹4,200</span>
+                <span class="product-weight">38 gms | Set of 4</span>
+              </div>
+              <div class="product-card-actions">
+                <button class="btn-view-details">View Details</button>
+                <a href="https://wa.me/919198683121?text=Hi%20DK%20Jewellers,%20I%20am%20interested%20in%20Handcrafted%20925%20Silver%20Bangles" target="_blank" rel="noopener" class="btn-inquire-icon" title="Inquire on WhatsApp">💬</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. NECKLACE -->
+          <div class="product-card" data-title="22K Royal Temple Choker Necklace" data-category="Necklace" data-metal="22K Yellow Gold" data-metal-type="gold" data-purity="916 BIS Hallmarked" data-weight="42.5 gms" data-price="Price on Daily Gold Rate" data-desc="Exquisite 22K temple jewellery choker necklace crafted with fine floral filigree." data-img="images/gold_choker.jpg">
+            <div class="product-card-img-wrap">
+              <span class="badge-purity">22K 916 Gold</span>
+              <img src="images/gold_choker.jpg" alt="22K Royal Temple Choker Necklace">
+            </div>
+            <div class="product-card-body">
+              <span class="product-category-name">3. Necklace • Gold</span>
+              <h4 class="product-card-title">22K Royal Temple Choker</h4>
+              <p class="product-meta-desc">Intricate collar choker with seed pearl edging.</p>
+              <div class="product-price-bar">
+                <span class="product-price">Price on Daily Rate</span>
+                <span class="product-weight">42.5 gms | 22K 916</span>
+              </div>
+              <div class="product-card-actions">
+                <button class="btn-view-details">View Details</button>
+                <a href="https://wa.me/919198683121?text=Hi%20DK%20Jewellers,%20I%20am%20interested%20in%2022K%20Royal%20Temple%20Choker" target="_blank" rel="noopener" class="btn-inquire-icon" title="Inquire on WhatsApp">💬</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-title="Handcrafted Gold Rani Haar" data-category="Necklace" data-metal="22K Yellow Gold" data-metal-type="gold" data-purity="916 BIS Hallmarked" data-weight="68.0 gms" data-price="Price on Daily Gold Rate" data-desc="Opulent long rani haar with temple motifs and emerald accent beads." data-img="images/gold_necklace.jpg">
+            <div class="product-card-img-wrap">
+              <span class="badge-purity">22K 916 Gold</span>
+              <img src="images/gold_necklace.jpg" alt="Handcrafted Gold Rani Haar">
+            </div>
+            <div class="product-card-body">
+              <span class="product-category-name">3. Necklace • Gold</span>
+              <h4 class="product-card-title">Handcrafted Gold Rani Haar</h4>
+              <p class="product-meta-desc">Grand multi-strand long necklace for regal brides.</p>
+              <div class="product-price-bar">
+                <span class="product-price">Price on Daily Rate</span>
+                <span class="product-weight">68.0 gms | 22K 916</span>
+              </div>
+              <div class="product-card-actions">
+                <button class="btn-view-details">View Details</button>
+                <a href="https://wa.me/919198683121?text=Hi%20DK%20Jewellers,%20I%20am%20interested%20in%20Handcrafted%20Gold%20Rani%20Haar" target="_blank" rel="noopener" class="btn-inquire-icon" title="Inquire on WhatsApp">💬</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-title="Royal Silver Temple Collar Necklace" data-category="Necklace" data-metal="925 Sterling Silver" data-metal-type="silver" data-purity="925 Pure" data-weight="65.0 gms" data-price="₹7,500" data-desc="Traditional silver temple choker collar with ornate filigree mesh and dangling silver beads." data-img="images/silver_necklace.jpg">
+            <div class="product-card-img-wrap">
+              <span class="badge-purity badge-metal-silver">925 Silver</span>
+              <img src="images/silver_necklace.jpg" alt="Royal Silver Temple Collar Necklace">
+            </div>
+            <div class="product-card-body">
+              <span class="product-category-name">3. Necklace • Silver</span>
+              <h4 class="product-card-title">Royal Silver Temple Necklace</h4>
+              <p class="product-meta-desc">Heavy sterling silver necklace with antique tribal finish.</p>
+              <div class="product-price-bar">
+                <span class="product-price">₹7,500</span>
+                <span class="product-weight">65.0 gms | 925 Pure</span>
+              </div>
+              <div class="product-card-actions">
+                <button class="btn-view-details">View Details</button>
+                <a href="https://wa.me/919198683121?text=Hi%20DK%20Jewellers,%20I%20am%20interested%20in%20Royal%20Silver%20Temple%20Necklace" target="_blank" rel="noopener" class="btn-inquire-icon" title="Inquire on WhatsApp">💬</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-title="Signature Emerald &amp; Polki Choker" data-category="Necklace" data-metal="22K Gold &amp; Emeralds" data-metal-type="gold" data-purity="916 BIS Hallmarked" data-weight="58.5 gms" data-price="Price on Daily Gold Rate" data-desc="Signature wedding choker set with uncut Polki stones and hand-strung emerald cascades." data-img="images/hero_jewellery.jpg">
+            <div class="product-card-img-wrap">
+              <span class="badge-purity">Signature Choker</span>
+              <img src="images/hero_jewellery.jpg" alt="Signature Emerald &amp; Polki Choker">
+            </div>
+            <div class="product-card-body">
+              <span class="product-category-name">3. Necklace • Polki</span>
+              <h4 class="product-card-title">Signature Emerald Polki Choker</h4>
+              <p class="product-meta-desc">Royal bridal necklace with tiered emerald beads.</p>
+              <div class="product-price-bar">
+                <span class="product-price">Price on Daily Rate</span>
+                <span class="product-weight">58.5 gms | 22K 916</span>
+              </div>
+              <div class="product-card-actions">
+                <button class="btn-view-details">View Details</button>
+                <a href="https://wa.me/919198683121?text=Hi%20DK%20Jewellers,%20I%20am%20interested%20in%20Signature%20Emerald%20Polki%20Choker" target="_blank" rel="noopener" class="btn-inquire-icon" title="Inquire on WhatsApp">💬</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. BRACELETS -->
+          <div class="product-card" data-title="Traditional Solid Silver Kada" data-category="Bracelets" data-metal="Pure Silver" data-metal-type="silver" data-purity="Pure Chandi" data-weight="55.0 gms" data-price="₹5,400" data-desc="Solid silver wrist bracelet with intricate carved motifs and antique finish." data-img="images/silver_bangles.jpg">
+            <div class="product-card-img-wrap">
+              <span class="badge-purity badge-metal-silver">Pure Silver</span>
+              <img src="images/silver_bangles.jpg" alt="Traditional Solid Silver Kada">
+            </div>
+            <div class="product-card-body">
+              <span class="product-category-name">4. Bracelets • Silver</span>
+              <h4 class="product-card-title">Traditional Solid Silver Kada</h4>
+              <p class="product-meta-desc">Heavy solid wrist bracelet with antique Indian finish.</p>
+              <div class="product-price-bar">
+                <span class="product-price">₹5,400</span>
+                <span class="product-weight">55 gms | Solid Chandi</span>
+              </div>
+              <div class="product-card-actions">
+                <button class="btn-view-details">View Details</button>
+                <a href="https://wa.me/919198683121?text=Hi%20DK%20Jewellers,%20I%20am%20interested%20in%20Traditional%20Solid%20Silver%20Kada" target="_blank" rel="noopener" class="btn-inquire-icon" title="Inquire on WhatsApp">💬</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-title="22K Gold Handcrafted Link Bracelet" data-category="Bracelets" data-metal="22K Yellow Gold" data-metal-type="gold" data-purity="916 BIS Hallmarked" data-weight="14.8 gms" data-price="Price on Daily Gold Rate" data-desc="Flexible gold bracelet with secure lobster lock and high polish diamond-cut accents." data-img="images/gold_bangles.jpg">
+            <div class="product-card-img-wrap">
+              <span class="badge-purity">22K 916 Gold</span>
+              <img src="images/gold_bangles.jpg" alt="22K Gold Handcrafted Link Bracelet">
+            </div>
+            <div class="product-card-body">
+              <span class="product-category-name">4. Bracelets • Gold</span>
+              <h4 class="product-card-title">22K Gold Link Bracelet</h4>
+              <p class="product-meta-desc">Supple handcrafted links with lustrous finish.</p>
+              <div class="product-price-bar">
+                <span class="product-price">Price on Daily Rate</span>
+                <span class="product-weight">14.8 gms | 22K 916</span>
+              </div>
+              <div class="product-card-actions">
+                <button class="btn-view-details">View Details</button>
+                <a href="https://wa.me/919198683121?text=Hi%20DK%20Jewellers,%20I%20am%20interested%20in%2022K%20Gold%20Link%20Bracelet" target="_blank" rel="noopener" class="btn-inquire-icon" title="Inquire on WhatsApp">💬</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. NATH -->
+          <div class="product-card" data-title="Traditional Kundan Bridal Nath" data-category="Nath" data-metal="22K Gold &amp; Kundan" data-metal-type="gold" data-purity="916 Certified" data-weight="8.5 gms" data-price="Price on Daily Gold Rate" data-desc="Auspicious bridal nose ring with flower crest, pearl string and ear hook." data-img="images/cat_nath.jpg">
+            <div class="product-card-img-wrap">
+              <span class="badge-purity">Bridal Nath</span>
+              <img src="images/cat_nath.jpg" alt="Traditional Kundan Bridal Nath">
+            </div>
+            <div class="product-card-body">
+              <span class="product-category-name">5. Nath • Bridal</span>
+              <h4 class="product-card-title">Traditional Bridal Kundan Nath</h4>
+              <p class="product-meta-desc">Auspicious nose hoop with delicate pearl chain string.</p>
+              <div class="product-price-bar">
+                <span class="product-price">Price on Daily Rate</span>
+                <span class="product-weight">8.5 gms | 22K Gold</span>
+              </div>
+              <div class="product-card-actions">
+                <button class="btn-view-details">View Details</button>
+                <a href="https://wa.me/919198683121?text=Hi%20DK%20Jewellers,%20I%20am%20interested%20in%20Traditional%20Bridal%20Kundan%20Nath" target="_blank" rel="noopener" class="btn-inquire-icon" title="Inquire on WhatsApp">💬</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. RING -->
+          <div class="product-card" data-title="925 Filigree Solitaire Silver Ring" data-category="Ring" data-metal="925 Sterling Silver" data-metal-type="silver" data-purity="925 Certified" data-weight="4.8 gms" data-price="₹2,499" data-desc="Intricate vintage filigree band in pure 925 sterling silver set with a brilliant round cut solitaire zircon gemstone." data-img="images/silver_ring.jpg">
+            <div class="product-card-img-wrap">
+              <span class="badge-purity badge-metal-silver">925 Silver</span>
+              <img src="images/silver_ring.jpg" alt="925 Filigree Solitaire Silver Ring">
+            </div>
+            <div class="product-card-body">
+              <span class="product-category-name">6. Ring • Silver</span>
+              <h4 class="product-card-title">925 Filigree Solitaire Silver Ring</h4>
+              <p class="product-meta-desc">Vintage filigree band with brilliant center zircon.</p>
+              <div class="product-price-bar">
+                <span class="product-price">₹2,499</span>
+                <span class="product-weight">4.8 gms | 925 Pure</span>
+              </div>
+              <div class="product-card-actions">
+                <button class="btn-view-details">View Details</button>
+                <a href="https://wa.me/919198683121?text=Hi%20DK%20Jewellers,%20I%20am%20interested%20in%20925%20Filigree%20Solitaire%20Silver%20Ring" target="_blank" rel="noopener" class="btn-inquire-icon" title="Inquire on WhatsApp">💬</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-title="22K Royal Signet Gold Ring" data-category="Ring" data-metal="22K Yellow Gold" data-metal-type="gold" data-purity="916 BIS Hallmarked" data-weight="7.2 gms" data-price="Price on Daily Gold Rate" data-desc="Regal signet ring crafted in 22 Karat certified gold with mirror finish." data-img="images/gold_ring_chain.jpg">
+            <div class="product-card-img-wrap">
+              <span class="badge-purity">22K 916 Gold</span>
+              <img src="images/gold_ring_chain.jpg" alt="22K Royal Signet Gold Ring">
+            </div>
+            <div class="product-card-body">
+              <span class="product-category-name">6. Ring • Gold</span>
+              <h4 class="product-card-title">22K Royal Signet Gold Ring</h4>
+              <p class="product-meta-desc">Classic heirloom signet ring with precision border.</p>
+              <div class="product-price-bar">
+                <span class="product-price">Price on Daily Rate</span>
+                <span class="product-weight">7.2 gms | 22K 916</span>
+              </div>
+              <div class="product-card-actions">
+                <button class="btn-view-details">View Details</button>
+                <a href="https://wa.me/919198683121?text=Hi%20DK%20Jewellers,%20I%20am%20interested%20in%2022K%20Royal%20Signet%20Gold%20Ring" target="_blank" rel="noopener" class="btn-inquire-icon" title="Inquire on WhatsApp">💬</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-title="Antique Floral Carved Silver Ring" data-category="Ring" data-metal="925 Sterling Silver" data-metal-type="silver" data-purity="925 Certified" data-weight="5.2 gms" data-price="₹1,899" data-desc="Traditional oxidized floral carved motif on pure silver body." data-img="images/silver_ring.jpg">
+            <div class="product-card-img-wrap">
+              <span class="badge-purity badge-metal-silver">925 Silver</span>
+              <img src="images/silver_ring.jpg" alt="Antique Floral Carved Silver Ring">
+            </div>
+            <div class="product-card-body">
+              <span class="product-category-name">6. Ring • Silver</span>
+              <h4 class="product-card-title">Antique Floral Carved Silver Ring</h4>
+              <p class="product-meta-desc">Hand-carved floral motif with anti-tarnish finish.</p>
+              <div class="product-price-bar">
+                <span class="product-price">₹1,899</span>
+                <span class="product-weight">5.2 gms | 925 Pure</span>
+              </div>
+              <div class="product-card-actions">
+                <button class="btn-view-details">View Details</button>
+                <a href="https://wa.me/919198683121?text=Hi%20DK%20Jewellers,%20I%20am%20interested%20in%20Antique%20Floral%20Carved%20Silver%20Ring" target="_blank" rel="noopener" class="btn-inquire-icon" title="Inquire on WhatsApp">💬</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-title="22K Floral Petal Gold Ring" data-category="Ring" data-metal="22K Yellow Gold" data-metal-type="gold" data-purity="916 BIS Hallmarked" data-weight="5.8 gms" data-price="Price on Daily Gold Rate" data-desc="Feminine floral petal arrangement with diamond-cut facet highlights on 22K gold." data-img="images/gold_ring_chain.jpg">
+            <div class="product-card-img-wrap">
+              <span class="badge-purity">22K 916 Gold</span>
+              <img src="images/gold_ring_chain.jpg" alt="22K Floral Petal Gold Ring">
+            </div>
+            <div class="product-card-body">
+              <span class="product-category-name">6. Ring • Gold</span>
+              <h4 class="product-card-title">22K Floral Petal Gold Ring</h4>
+              <p class="product-meta-desc">Radiant blossom pattern with diamond-cut sparkle.</p>
+              <div class="product-price-bar">
+                <span class="product-price">Price on Daily Rate</span>
+                <span class="product-weight">5.8 gms | 22K 916</span>
+              </div>
+              <div class="product-card-actions">
+                <button class="btn-view-details">View Details</button>
+                <a href="https://wa.me/919198683121?text=Hi%20DK%20Jewellers,%20I%20am%20interested%20in%2022K%20Floral%20Petal%20Gold%20Ring" target="_blank" rel="noopener" class="btn-inquire-icon" title="Inquire on WhatsApp">💬</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. BRIDAL COLLECTION -->
+          <div class="product-card" data-title="Royal Heritage Indian Bridal Complete Set" data-category="Bridal Collection" data-metal="22K Gold, Polki &amp; Kundan" data-metal-type="gold" data-purity="916 BIS Hallmarked" data-weight="145 gms" data-price="Price on Consultation" data-desc="Complete wedding trousseau set featuring Kundan choker, rani haar, jhumkas, maang tikka, and hathphool." data-img="images/banner_bridal.jpg">
+            <div class="product-card-img-wrap">
+              <span class="badge-purity">Complete Bridal Set</span>
+              <img src="images/banner_bridal.jpg" alt="Royal Heritage Indian Bridal Complete Set">
+            </div>
+            <div class="product-card-body">
+              <span class="product-category-name">7. Bridal Collection • Complete</span>
+              <h4 class="product-card-title">Royal Bridal Heritage Set</h4>
+              <p class="product-meta-desc">Complete wedding ensemble with master craftsmanship.</p>
+              <div class="product-price-bar">
+                <span class="product-price">Custom Bridal Pricing</span>
+                <span class="product-weight">145 gms | 22K</span>
+              </div>
+              <div class="product-card-actions">
+                <button class="btn-view-details">View Details</button>
+                <a href="https://wa.me/919198683121?text=Hi%20DK%20Jewellers,%20I%20am%20interested%20in%20Royal%20Bridal%20Heritage%20Set" target="_blank" rel="noopener" class="btn-inquire-icon" title="Inquire on WhatsApp">💬</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-title="Kundan &amp; Emerald Wedding Choker" data-category="Bridal Collection" data-metal="22K Gold &amp; Kundan" data-metal-type="gold" data-purity="916 Hallmarked" data-weight="52.0 gms" data-price="Price on Daily Gold Rate" data-desc="Intricately set kundan choker with emerald drop accents, tailored for marriage ceremonies." data-img="images/bridal_necklace.jpg">
+            <div class="product-card-img-wrap">
+              <span class="badge-purity">Bridal Heritage</span>
+              <img src="images/bridal_necklace.jpg" alt="Kundan &amp; Emerald Wedding Choker">
+            </div>
+            <div class="product-card-body">
+              <span class="product-category-name">7. Bridal Collection • Choker</span>
+              <h4 class="product-card-title">Kundan &amp; Emerald Wedding Choker</h4>
+              <p class="product-meta-desc">Traditional kundan setting with auspicious emeralds.</p>
+              <div class="product-price-bar">
+                <span class="product-price">Price on Daily Rate</span>
+                <span class="product-weight">52.0 gms | 22K 916</span>
+              </div>
+              <div class="product-card-actions">
+                <button class="btn-view-details">View Details</button>
+                <a href="https://wa.me/919198683121?text=Hi%20DK%20Jewellers,%20I%20am%20interested%20in%20Kundan%20Emerald%20Wedding%20Choker" target="_blank" rel="noopener" class="btn-inquire-icon" title="Inquire on WhatsApp">💬</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. ANKLET -->
+          <div class="product-card" data-title="Traditional Ghungroo Silver Payal Pair" data-category="Anklet" data-metal="Pure Silver" data-metal-type="silver" data-purity="Pure Chandi" data-weight="48.0 gms" data-price="₹4,850" data-desc="Authentic traditional Indian silver payal pair adorned with melodic ghungroo bells and floral jaal work." data-img="images/silver_anklet.jpg">
+            <div class="product-card-img-wrap">
+              <span class="badge-purity badge-metal-silver">Pure Silver</span>
+              <img src="images/silver_anklet.jpg" alt="Traditional Ghungroo Silver Payal Pair">
+            </div>
+            <div class="product-card-body">
+              <span class="product-category-name">8. Anklet • Silver</span>
+              <h4 class="product-card-title">Traditional Ghungroo Payal Pair</h4>
+              <p class="product-meta-desc">Melodic tinkling ghungroos with ornate filigree mesh.</p>
+              <div class="product-price-bar">
+                <span class="product-price">₹4,850</span>
+                <span class="product-weight">48 gms (Pair)</span>
+              </div>
+              <div class="product-card-actions">
+                <button class="btn-view-details">View Details</button>
+                <a href="https://wa.me/919198683121?text=Hi%20DK%20Jewellers,%20I%20am%20interested%20in%20Traditional%20Ghungroo%20Payal%20Pair" target="_blank" rel="noopener" class="btn-inquire-icon" title="Inquire on WhatsApp">💬</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-title="Royal Bridal Heavy Silver Payal" data-category="Anklet" data-metal="Pure Silver" data-metal-type="silver" data-purity="Pure Chandi" data-weight="72.0 gms" data-price="₹6,800" data-desc="Exquisite handcrafted bridal heavy payal with royal chhalla borders and bell fringes." data-img="images/silver_anklet.jpg">
+            <div class="product-card-img-wrap">
+              <span class="badge-purity badge-metal-silver">Bridal Silver</span>
+              <img src="images/silver_anklet.jpg" alt="Royal Bridal Heavy Silver Payal">
+            </div>
+            <div class="product-card-body">
+              <span class="product-category-name">8. Anklet • Bridal</span>
+              <h4 class="product-card-title">Royal Bridal Heavy Silver Payal</h4>
+              <p class="product-meta-desc">Heritage bridal design with layered chhalla edging.</p>
+              <div class="product-price-bar">
+                <span class="product-price">₹6,800</span>
+                <span class="product-weight">72 gms (Pair)</span>
+              </div>
+              <div class="product-card-actions">
+                <button class="btn-view-details">View Details</button>
+                <a href="https://wa.me/919198683121?text=Hi%20DK%20Jewellers,%20I%20am%20interested%20in%20Royal%20Bridal%20Heavy%20Silver%20Payal" target="_blank" rel="noopener" class="btn-inquire-icon" title="Inquire on WhatsApp">💬</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-title="Sleek Everyday Pure Silver Anklet" data-category="Anklet" data-metal="925 Sterling Silver" data-metal-type="silver" data-purity="925 Certified" data-weight="24.0 gms" data-price="₹2,750" data-desc="Lightweight minimalist silver anklet crafted for durable everyday comfort and style." data-img="images/silver_anklet.jpg">
+            <div class="product-card-img-wrap">
+              <span class="badge-purity badge-metal-silver">Daily Wear</span>
+              <img src="images/silver_anklet.jpg" alt="Sleek Everyday Pure Silver Anklet">
+            </div>
+            <div class="product-card-body">
+              <span class="product-category-name">8. Anklet • Silver</span>
+              <h4 class="product-card-title">Sleek Everyday Silver Anklet</h4>
+              <p class="product-meta-desc">Minimalist lightweight design for comfortable daily wear.</p>
+              <div class="product-price-bar">
+                <span class="product-price">₹2,750</span>
+                <span class="product-weight">24 gms (Pair)</span>
+              </div>
+              <div class="product-card-actions">
+                <button class="btn-view-details">View Details</button>
+                <a href="https://wa.me/919198683121?text=Hi%20DK%20Jewellers,%20I%20am%20interested%20in%20Sleek%20Everyday%20Silver%20Anklet" target="_blank" rel="noopener" class="btn-inquire-icon" title="Inquire on WhatsApp">💬</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. MAANG TIKKA -->
+          <div class="product-card" data-title="Royal Bridal Gold Maang Tikka" data-category="Maang Tikka" data-metal="22K Gold &amp; Pearls" data-metal-type="gold" data-purity="916 BIS Hallmarked" data-weight="11.2 gms" data-price="Price on Daily Gold Rate" data-desc="Ornate round borla maang tikka with kundan setting and pearl chain strand." data-img="images/bridal_maangtikka.jpg">
+            <div class="product-card-img-wrap">
+              <span class="badge-purity">Bridal Heritage</span>
+              <img src="images/bridal_maangtikka.jpg" alt="Royal Bridal Gold Maang Tikka">
+            </div>
+            <div class="product-card-body">
+              <span class="product-category-name">9. Maang Tikka • Gold</span>
+              <h4 class="product-card-title">Royal Bridal Gold Maang Tikka</h4>
+              <p class="product-meta-desc">Crescent motif with pearl chain and ruby accents.</p>
+              <div class="product-price-bar">
+                <span class="product-price">Price on Daily Rate</span>
+                <span class="product-weight">11.2 gms | 22K 916</span>
+              </div>
+              <div class="product-card-actions">
+                <button class="btn-view-details">View Details</button>
+                <a href="https://wa.me/919198683121?text=Hi%20DK%20Jewellers,%20I%20am%20interested%20in%20Royal%20Bridal%20Gold%20Maang%20Tikka" target="_blank" rel="noopener" class="btn-inquire-icon" title="Inquire on WhatsApp">💬</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. CHAIN -->
+          <div class="product-card" data-title="Traditional Handcrafted Gold Rope Chain" data-category="Chain" data-metal="22K Yellow Gold" data-metal-type="gold" data-purity="916 BIS Hallmarked" data-weight="16.5 gms" data-price="Price on Daily Gold Rate" data-desc="Sturdy and lustrous traditional rope chain in 22K pure hallmarked gold with secure S-hook." data-img="images/cat_chain.jpg">
+            <div class="product-card-img-wrap">
+              <span class="badge-purity">22K 916 Gold</span>
+              <img src="images/cat_chain.jpg" alt="Traditional Handcrafted Gold Rope Chain">
+            </div>
+            <div class="product-card-body">
+              <span class="product-category-name">10. Chain • Gold</span>
+              <h4 class="product-card-title">Traditional Gold Rope Chain</h4>
+              <p class="product-meta-desc">High strength rope link design for everyday wear.</p>
+              <div class="product-price-bar">
+                <span class="product-price">Price on Daily Rate</span>
+                <span class="product-weight">16.5 gms | 22K 916</span>
+              </div>
+              <div class="product-card-actions">
+                <button class="btn-view-details">View Details</button>
+                <a href="https://wa.me/919198683121?text=Hi%20DK%20Jewellers,%20I%20am%20interested%20in%20Traditional%20Gold%20Rope%20Chain" target="_blank" rel="noopener" class="btn-inquire-icon" title="Inquire on WhatsApp">💬</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-title="Classic Curb Link 22K Gold Chain" data-category="Chain" data-metal="22K Yellow Gold" data-metal-type="gold" data-purity="916 BIS Hallmarked" data-weight="21.0 gms" data-price="Price on Daily Gold Rate" data-desc="Modern curb chain links offering exceptional shine and durability in 22K hallmark gold." data-img="images/cat_chain.jpg">
+            <div class="product-card-img-wrap">
+              <span class="badge-purity">22K 916 Gold</span>
+              <img src="images/cat_chain.jpg" alt="Classic Curb Link 22K Gold Chain">
+            </div>
+            <div class="product-card-body">
+              <span class="product-category-name">10. Chain • Gold</span>
+              <h4 class="product-card-title">Classic Curb Link Gold Chain</h4>
+              <p class="product-meta-desc">Refined interlocking links offering comfort and prestige.</p>
+              <div class="product-price-bar">
+                <span class="product-price">Price on Daily Rate</span>
+                <span class="product-weight">21.0 gms | 22K 916</span>
+              </div>
+              <div class="product-card-actions">
+                <button class="btn-view-details">View Details</button>
+                <a href="https://wa.me/919198683121?text=Hi%20DK%20Jewellers,%20I%20am%20interested%20in%20Classic%20Curb%20Link%20Gold%20Chain" target="_blank" rel="noopener" class="btn-inquire-icon" title="Inquire on WhatsApp">💬</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11. OTHER -->
+          <div class="product-card" data-title="999 Fine Pure Silver Laxmi-Ganesh Puja Coins" data-category="Other" data-metal="999 Pure Silver" data-metal-type="silver" data-purity="999 Fine Silver" data-weight="20.0 gms" data-price="₹2,100" data-desc="Fine 999 purity certified silver coins with embossed Bhagwan Ganesh and Mata Lakshmi for puja &amp; gifting." data-img="images/silver_other.jpg">
+            <div class="product-card-img-wrap">
+              <span class="badge-purity badge-metal-silver">999 Fine Silver</span>
+              <img src="images/silver_other.jpg" alt="Pure Silver Puja Coin">
+            </div>
+            <div class="product-card-body">
+              <span class="product-category-name">11. Other • Auspicious</span>
+              <h4 class="product-card-title">999 Fine Silver Puja Coin</h4>
+              <p class="product-meta-desc">Sacred Lakshmi-Ganesha motifs for puja and Diwali gifting.</p>
+              <div class="product-price-bar">
+                <span class="product-price">₹2,100</span>
+                <span class="product-weight">20 gms | 999 Purity</span>
+              </div>
+              <div class="product-card-actions">
+                <button class="btn-view-details">View Details</button>
+                <a href="https://wa.me/919198683121?text=Hi%20DK%20Jewellers,%20I%20am%20interested%20in%20999%20Fine%20Silver%20Puja%20Coin" target="_blank" rel="noopener" class="btn-inquire-icon" title="Inquire on WhatsApp">💬</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-title="Pure Silver Traditional Bichhiya (Toe Rings)" data-category="Other" data-metal="Pure Silver" data-metal-type="silver" data-purity="Pure Chandi" data-weight="12.0 gms" data-price="₹850" data-desc="Traditional auspicious silver toe rings (bichhiya) with floral engraved bells." data-img="images/silver_other.jpg">
+            <div class="product-card-img-wrap">
+              <span class="badge-purity badge-metal-silver">Pure Silver</span>
+              <img src="images/silver_other.jpg" alt="Pure Silver Traditional Bichhiya">
+            </div>
+            <div class="product-card-body">
+              <span class="product-category-name">11. Other • Silver</span>
+              <h4 class="product-card-title">Traditional Silver Bichhiya</h4>
+              <p class="product-meta-desc">Auspicious hand-carved toe ring pair in pure silver.</p>
+              <div class="product-price-bar">
+                <span class="product-price">₹850</span>
+                <span class="product-weight">12 gms | Pair</span>
+              </div>
+              <div class="product-card-actions">
+                <button class="btn-view-details">View Details</button>
+                <a href="https://wa.me/919198683121?text=Hi%20DK%20Jewellers,%20I%20am%20interested%20in%20Traditional%20Silver%20Bichhiya" target="_blank" rel="noopener" class="btn-inquire-icon" title="Inquire on WhatsApp">💬</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- No Results Fallback Message -->
+        <div id="noResultsMessage" style="display: none; text-align: center; padding: 60px 20px; background: #fff; border-radius: var(--radius-md); border: 1px dashed var(--border-gold); margin-top: 30px;">
+          <span style="font-size: 3rem; display: block; margin-bottom: 10px;">🔍</span>
+          <h3 style="color: var(--primary-maroon); margin-bottom: 8px;">No Jewellery Items Found</h3>
+          <p style="color: var(--text-muted); margin-bottom: 20px;">We couldn't find items matching your current filters. Please try another search keyword or clear filters.</p>
+          <button class="btn btn-primary" onclick="document.querySelector('.category-pill[data-category=\'all\']').click(); document.querySelector('.metal-pill[data-metal=\'all\']').click(); document.getElementById('productSearchInput').value='';">Reset All Filters</button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       COMMON FOOTER (Section 9)
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- 9.1 Column One — Brand Identity -->
+        <div class="footer-col-brand">
+          <div class="footer-brand-header">
+            <div class="brand-crest">
+              <span class="brand-crest-text">DKJ</span>
+            </div>
+            <div>
+              <h3 class="footer-brand-title">DK Jewellers</h3>
+              <p style="font-size: 0.72rem; color: var(--gold-light); letter-spacing: 2px;">DILEEP KUMAR JEWELLERS</p>
+            </div>
+          </div>
+          <p class="footer-tagline">“Purity You Can Trust, Elegance You Can Wear.”</p>
+          <p class="footer-desc">Welcome to DK Jewellers, where timeless elegance meets traditional craftsmanship. Discover jewellery designed to celebrate your special moments with beauty, grace and trust.</p>
+          <div class="footer-cert-badges">
+            <span class="footer-cert-pill">✓ 100% BIS Hallmarked</span>
+            <span class="footer-cert-pill">✓ 925 Sterling Silver</span>
+            <span class="footer-cert-pill">✓ GST Registered</span>
+          </div>
+        </div>
+
+        <!-- 9.2 Column Two — Quick Links -->
+        <div class="footer-col-links">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">✦ Home</a></li>
+            <li><a href="about.html">✦ About Us</a></li>
+            <li><a href="product.html">✦ Product Collection</a></li>
+            <li><a href="contact.html">✦ Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- 9.3 Column Three — Contact Information -->
+        <div class="footer-col-contact">
+          <h4 class="footer-heading">Contact Information</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <span class="footer-contact-icon">📍</span>
+              <div>
+                <strong>Showroom Address:</strong><br>
+                Chauri, Parshurampur, Basti,<br>
+                Uttar Pradesh, India - 272129
+              </div>
+            </li>
+            <li>
+              <span class="footer-contact-icon">📞</span>
+              <div>
+                <strong>Phone Numbers:</strong><br>
+                <a href="tel:+919198683121">+91 9198683121</a><br>
+                <a href="tel:+919305321898">+91 9305321898</a><br>
+                <a href="tel:+919277435004">+91 9277435004</a>
+              </div>
+            </li>
+            <li>
+              <span class="footer-contact-icon">✉️</span>
+              <div>
+                <strong>Official Email:</strong><br>
+                <a href="mailto:dileepdileepkaushal@gmail.com">dileepdileepkaushal@gmail.com</a>
+              </div>
+            </li>
+            <li>
+              <span class="footer-contact-icon">💬</span>
+              <div>
+                <strong>Direct Query:</strong><br>
+                <a href="contact.html" style="color: var(--gold-light); text-decoration: underline;">Send message via Contact Form →</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9.5 Copyright Bar -->
+    <div class="footer-copyright-bar">
+      <div class="container">
+        <p>© 2026 DK Jewellers. All rights reserved. | Proprietary to DILEEP KUMAR JEWELLERS (DILIP KUMAR KAUSHAL)</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick View Modal Container -->
+  <div class="modal-overlay" id="productQuickModal" role="dialog" aria-modal="true" aria-label="Product Details">
+    <div class="modal-card">
+      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      <div class="modal-grid">
+        <div class="modal-img-wrap">
+          <img src="" alt="" class="modal-img">
+        </div>
+        <div class="modal-info-wrap">
+          <span class="modal-cat-tag">Category</span>
+          <h3 class="modal-product-title">Product Name</h3>
+          <div class="modal-price-tag">Price</div>
+          
+          <ul class="modal-specs-list">
+            <li><span>Metal / Material:</span> <strong class="spec-metal">22K Gold</strong></li>
+            <li><span>Purity Verification:</span> <strong class="spec-purity">916 BIS Hallmark</strong></li>
+            <li><span>Approximate Weight:</span> <strong class="spec-weight">Customizable</strong></li>
+          </ul>
+
+          <p class="modal-desc">Product description details will appear here.</p>
+          
+          <div style="display: flex; gap: 10px;">
+            <a href="#" target="_blank" rel="noopener" class="btn btn-gold modal-whatsapp-link" style="flex: 1;">💬 Inquire on WhatsApp</a>
+            <a href="contact.html" class="btn btn-outline" style="flex: 1;">Visit Showroom</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Action -->
+  <a href="https://wa.me/919198683121?text=Hello%20DK%20Jewellers,%20I%20have%20an%20enquiry%20regarding%20jewellery" class="floating-whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
